@@ -160,7 +160,7 @@ class NewVersion {
 
     final document = parse(response.body);
     var releaseNotes =
-        document.querySelector('div[itemprop="description"]')!.innerHtml;
+        document.querySelector('div[itemprop="description"]')?.innerHtml;
     final storeVersion =
         RegExp(r',\[\[\["([0-9,\.]*)"]],').firstMatch(response.body)!.group(1);
 
